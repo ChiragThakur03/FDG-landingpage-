@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engi-Sphere | The Engineering OS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0F19',
+                            card: '#151B2B',
+                            accent: '#3B82F6', // Electric Blue
+                            cyan: '#06B6D4',
+                            neon: '#00F0FF', // Cyberpunk Neon
+                            success: '#10B981',
+                            text: '#E2E8F0',
+                            muted: '#94A3B8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        mono: ['Space Grotesk', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0B0F19;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3B82F6;
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(to right, #3B82F6, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(21, 27, 43, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Grid Background Pattern */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+    </style>
+</head>
+
+<body class="bg-brand-dark text-brand-text overflow-x-hidden font-sans selection:bg-brand-accent selection:text-white">
+
+    <nav class="fixed w-full z-50 glass transition-all duration-300 border-b border-white/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3 cursor-pointer group"
+                    onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                    <div
+                        class="w-10 h-10 bg-brand-accent/10 border border-brand-accent/20 rounded-lg flex items-center justify-center text-brand-accent font-bold font-mono group-hover:bg-brand-accent group-hover:text-white transition">
+                        >_</div>
+                    <span class="font-mono text-xl font-bold tracking-tight text-white">Fix-D-Gap<span
+                            class="text-brand-accent">.exe</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-mono text-brand-muted">
+                    <a href="#dashboard" class="hover:text-white transition"><span class="text-brand-accent"></span>
+                        Dashboard</a>
+                    <a href="#skills" class="hover:text-white transition"><span class="text-brand-accent"></span>
+                        Skill-Verse</a>
+                    <a href="#projects" class="hover:text-white transition"><span class="text-brand-accent"></span>
+                        Projects</a>
+                    <a href="#compar" class="hover:text-white transition"><span class="text-brand-accent"></span>
+                        Competitions</a>
+                    <a href="#mentorship" class="hover:text-white transition"><span class="text-brand-accent"></span>
+                        Mentorship</a>
+                    <a href="#career" class="hover:text-white transition"><span class="text-brand-accent"></span>
+                        Career</a>
+                </div>
+                <div>
+                    <a href="#"
+                        class="bg-white text-brand-dark px-6 py-2.5 rounded-lg font-bold font-mono text-sm hover:bg-gray-200 transition shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                        Initialize_App
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero section  -->
+    <section class="relative  pt-32 pb-20 lg:pt-48 lg:pb-32 bg-grid">
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-accent opacity-10 blur-[120px] rounded-full pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <div class="inline-block px-4 py-1.5 rounded-full border border-brand-accent/30 bg-brand-accent/10 text-brand-cyan text-xs font-bold tracking-wider mb-6"
+                data-aos="fade-down">
+                🚀 THE ALL-IN-ONE ENGINEERING OS
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6 font-mono" data-aos="fade-up"
+                data-aos-delay="100">
+                From <span class="text-white">GPA</span> to <span class="text-gradient">CTC</span><br>
+                One Platform.
+            </h1>
+
+            <p class="text-xl text-brand-muted max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="200">
+                Stop juggling 10 tabs. Fix-D-Gap guides your academics, skills, projects, and placements in a single,
+                intelligent ecosystem.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
+                <button
+                    class="bg-brand-accent text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition shadow-[0_0_20px_rgba(59,130,246,0.5)]">
+                    Create Student Profile
+                </button>
+                <button
+                    class="glass text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/5 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-play text-brand-cyan"></i> Watch Demo
+                </button>
+            </div>
+            <!-- Dashboard Preview (CSS Only) -->
+            <div class="relative max-w-5xl mx-auto transform perspective-1000 group mt-20">
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-brand-neon to-blue-600 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500">
+                </div>
+                <div class="relative bg-brand-dark border border-slate-700 rounded-xl shadow-2xl overflow-hidden">
+                    <!-- Fake Window Header -->
+                    <div class="bg-slate-900 px-4 py-3 border-b border-slate-800 flex items-center gap-2">
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="mx-auto text-xs text-slate-500 font-mono">fix-d-gap-dashboard.exe</div>
+                    </div>
+
+                    <!-- Dashboard Grid -->
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-4 gap-6 bg-brand-dark/90">
+                        <!-- Sidebar -->
+                        <div class="hidden md:block col-span-1 space-y-4 border-r border-slate-800 pr-4">
+                            <div
+                                class="h-10 w-full bg-brand-cyan/10 rounded border border-brand-cyan/30 flex items-center px-3 text-brand-neon text-sm font-mono">
+                                <i class="fa-solid fa-house mr-2"></i> Command Center
+                            </div>
+                            <div
+                                class="h-10 w-full hover:bg-slate-800 rounded flex items-center px-3 text-slate-400 text-sm">
+                                <i class="fa-solid fa-book mr-2"></i> Uni-Sync
+                            </div>
+                            <div
+                                class="h-10 w-full hover:bg-slate-800 rounded flex items-center px-3 text-slate-400 text-sm">
+                                <i class="fa-solid fa-code mr-2"></i> Skill-Verse
+                            </div>
+                            <div
+                                class="h-10 w-full hover:bg-slate-800 rounded flex items-center px-3 text-slate-400 text-sm">
+                                <i class="fa-solid fa-briefcase mr-2"></i> Internships
+                            </div>
+                        </div>
+
+                        <!-- Main Content -->
+                        <div class="col-span-3 grid grid-cols-3 gap-4">
+                            <!-- Welcome -->
+                            <div
+                                class="col-span-3 bg-gradient-to-r from-slate-800 to-slate-900 rounded-lg p-5 border border-slate-700">
+                                <h3 class="text-lg font-bold text-white mb-1">Good Morning, Alex</h3>
+                                <p class="text-sm text-slate-400">You have 3 tasks pending today.</p>
+                                <div class="mt-4 h-2 w-full bg-slate-700 rounded-full overflow-hidden">
+                                    <div class="h-full w-2/3 bg-brand-neon shadow-[0_0_10px_#00F0FF]"></div>
+                                </div>
+                                <div class="mt-2 text-xs text-brand-cyan text-right font-mono">68% Daily Goal</div>
+                            </div>
+
+                            <!-- Cards -->
+                            <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 text-center">
+                                <div class="text-xs text-slate-500 uppercase tracking-wide mb-2">Employability Score
+                                </div>
+                                <div class="text-3xl font-bold text-white mb-1">745</div>
+                                <div class="text-xs text-green-400"><i class="fa-solid fa-arrow-up"></i> Top 12%</div>
+                            </div>
+                            <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 text-center">
+                                <div class="text-xs text-slate-500 uppercase tracking-wide mb-2">Current Streak</div>
+                                <div class="text-3xl font-bold text-orange-500 mb-1">14 <i
+                                        class="fa-solid fa-fire text-lg"></i></div>
+                                <div class="text-xs text-slate-400">Day Streak</div>
+                            </div>
+                            <div
+                                class="bg-slate-900 p-4 rounded-lg border border-slate-800 text-center relative overflow-hidden">
+                                <div class="absolute inset-0 bg-brand-cyan/5"></div>
+                                <div class="text-xs text-slate-500 uppercase tracking-wide mb-2">Next Exam</div>
+                                <div class="text-xl font-bold text-white mb-1">DBMS</div>
+                                <div class="text-xs text-brand-cyan font-bold">In 2 Days</div>
+                            </div>
+
+                            <!-- Tasks -->
+                            <div class="col-span-3 bg-slate-900 p-4 rounded-lg border border-slate-800">
+                                <div class="text-xs text-slate-500 uppercase tracking-wide mb-3">Today's Mission</div>
+                                <div class="space-y-2">
+                                    <div
+                                        class="flex items-center justify-between p-2 bg-slate-800 rounded border border-slate-700/50">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-2 h-2 rounded-full bg-brand-neon"></div>
+                                            <span class="text-sm text-slate-200">Solve 2 Array Problems (DSA)</span>
+                                        </div>
+                                        <span class="text-xs text-slate-500">15 mins</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between p-2 bg-slate-800 rounded border border-slate-700/50">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-2 h-2 rounded-full bg-purple-500"></div>
+                                            <span class="text-sm text-slate-200">Revise Unit 3 Notes (Uni-Sync)</span>
+                                        </div>
+                                        <span class="text-xs text-slate-500">45 mins</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reason for unemployment section -->
+    <section class="py-24 bg-[#050505] relative overflow-hidden border-b border-white/5">
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded bg-red-500/10 border border-red-500/20 text-red-500 text-xs font-mono mb-6">
+                    <i class="fa-solid fa-triangle-exclamation"></i> SYSTEM CRITICAL
+                </div>
+                <h3 class="text-4xl md:text-6xl font-bold font-mono text-white mb-6">Why <span class="text-red-500">80%
+                        of Engineers</span><br>Crash at Runtime?</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg font-mono text-sm leading-relaxed">
+                    > Analyzing system failure...<br>
+                    > Root cause identified: The traditional education stack is deprecated.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mt-12">
+                <!-- Problem 1: Fragmented Focus -->
+                <div class="group bg-[#0A0A0A] p-1 rounded-sm border border-red-900/30 hover:border-red-500/50 transition duration-300"
+                    data-aos="fade-up">
+                    <div class="bg-[#0f0f0f] p-6 h-full relative overflow-hidden">
+                        <div class="font-mono text-xs text-red-500 mb-4 flex justify-between">
+                            <span>ERROR_CODE_404</span>
+                            <i class="fa-solid fa-bug"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3 font-mono">Context Switching Overhead</h4>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                            Youtube for theory, LeetCode for practice, Notion for notes. Your context switching penalty
+                            is destroying your throughput.
+                        </p>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[2px] bg-red-500/20 group-hover:bg-red-500 transition-all duration-500">
+                        </div>
+                        <div
+                            class="text-[10px] font-mono text-red-400 bg-red-500/5 p-2 border border-red-500/10 mt-auto">
+                            > Exception: Focus_Not_Found
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem 2: GPA Trap -->
+                <div class="group bg-[#0A0A0A] p-1 rounded-sm border border-red-900/30 hover:border-red-500/50 transition duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-[#0f0f0f] p-6 h-full relative overflow-hidden">
+                        <div class="font-mono text-xs text-red-500 mb-4 flex justify-between">
+                            <span>DEADLOCK_DETECTED</span>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3 font-mono">Resource Deadlock</h4>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                            Process 'College_GPA' is holding resources needed by process 'Skill_Building'. Neither can
+                            proceed. System freezes.
+                        </p>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[2px] bg-red-500/20 group-hover:bg-red-500 transition-all duration-500">
+                        </div>
+                        <div
+                            class="text-[10px] font-mono text-red-400 bg-red-500/5 p-2 border border-red-500/10 mt-auto">
+                            > Warning: High CPU Usage (Burnout)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem 3: Experience Paradox -->
+                <div class="group bg-[#0A0A0A] p-1 rounded-sm border border-red-900/30 hover:border-red-500/50 transition duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-[#0f0f0f] p-6 h-full relative overflow-hidden">
+                        <div class="font-mono text-xs text-red-500 mb-4 flex justify-between">
+                            <span>ACCESS_DENIED</span>
+                            <i class="fa-solid fa-hand"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3 font-mono">Infinite Loop Paradox</h4>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                            while(!hired) { cannot_get_experience(); }<br>
+                            Break the loop or remain stuck in the fresher queue forever.
+                        </p>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[2px] bg-red-500/20 group-hover:bg-red-500 transition-all duration-500">
+                        </div>
+                        <div
+                            class="text-[10px] font-mono text-red-400 bg-red-500/5 p-2 border border-red-500/10 mt-auto">
+                            > Fatal: Resume_Rejected
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="300">
+                <div
+                    class="inline-block bg-[#151515] p-6 border border-brand-accent/30 rounded-lg relative overflow-hidden group hover:border-brand-accent transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-brand-accent/5 opacity-0 group-hover:opacity-100 transition duration-500">
+                    </div>
+                    <p class="text-white font-mono relative z-10">
+                        <span class="text-brand-accent">> sudo fix-d-gap --force</span><br>
+                        <span class="text-gray-500 text-sm">Initiating system patch...</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Uni-Sync System Section  -->
+    <section class="py-20 bg-[#0B0F19] border-t border-white/5 relative">
+        <div
+            class="absolute left-0 bottom-0 w-1/2 h-full bg-gradient-to-r from-blue-900/5 to-transparent skew-x-12 pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono mb-4">
+                        <i class="fa-solid fa-sync fa-spin"></i> SYNC ACTIVE
+                    </div>
+                    <h3 class="text-4xl font-bold mb-6 font-mono text-white">Don't let GPA<br> kill your <span
+                            class="text-blue-500">Skills</span>.</h3>
+                    <p class="text-brand-muted text-lg mb-8 leading-relaxed">
+                        We mapped the entire syllabus of top 50 universities. Uni-Sync intelligently schedules your
+                        academic revision so you can focus on coding.
+                    </p>
+
+                    <div class="space-y-4">
+                        <!-- Feature 1 -->
+                        <div
+                            class="flex gap-4 p-4 rounded-lg bg-white/5 border border-white/5 hover:border-blue-500/30 transition">
+                            <div
+                                class="w-10 h-10 rounded bg-[#151921] flex items-center justify-center shrink-0 border border-white/10 text-blue-400">
+                                <i class="fa-solid fa-moon"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm font-mono">Night Before Exam Kit</h4>
+                                <p class="text-xs text-gray-500 mt-1">Condensed notes that cover 80% of marks in 20%
+                                    time.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div
+                            class="flex gap-4 p-4 rounded-lg bg-white/5 border border-white/5 hover:border-blue-500/30 transition">
+                            <div
+                                class="w-10 h-10 rounded bg-[#151921] flex items-center justify-center shrink-0 border border-white/10 text-blue-400">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm font-mono">PYQ Database Access</h4>
+                                <p class="text-xs text-gray-500 mt-1">10 years of papers indexed by unit and difficulty.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual: File Transfer / Sync Interface -->
+                <div class="w-full relative group">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500">
+                    </div>
+                    <div class="relative bg-[#0F1218] rounded-xl border border-white/10 overflow-hidden shadow-2xl">
+                        <!-- Header -->
+                        <div class="bg-[#1a1f2e] p-3 border-b border-white/5 flex justify-between items-center">
+                            <span class="text-xs font-mono text-gray-400">uni-sync_daemon.exe</span>
+                            <div class="flex gap-1.5">
+                                <div class="w-2.5 h-2.5 rounded-full bg-white/10"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-white/10"></div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-6">
+                            <div class="flex justify-between items-end mb-2">
+                                <div class="text-sm text-gray-400 font-mono">Syncing <span class="text-white">Operating
+                                        Systems</span></div>
+                                <div class="text-xs text-blue-400 font-mono">45MB / 1.2GB</div>
+                            </div>
+                            <!-- Progress Bar -->
+                            <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden mb-6">
+                                <div
+                                    class="h-full w-2/3 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]">
+                                </div>
+                            </div>
+
+                            <!-- File List -->
+                            <div class="space-y-3">
+                                <div
+                                    class="flex items-center justify-between p-3 rounded bg-blue-500/10 border border-blue-500/20">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-file-pdf text-blue-400"></i>
+                                        <div class="text-xs text-blue-100 font-mono">Unit-3_Deadlocks_Notes.pdf</div>
+                                    </div>
+                                    <span class="text-[10px] text-blue-400">DOWNLOADED</span>
+                                </div>
+                                <div
+                                    class="flex items-center justify-between p-3 rounded bg-white/5 border border-white/5 opacity-60">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-file-pdf text-gray-500"></i>
+                                        <div class="text-xs text-gray-400 font-mono">Unit-4_Memory_Mgmt.pdf</div>
+                                    </div>
+                                    <span class="text-[10px] text-gray-600">PENDING...</span>
+                                </div>
+                            </div>
+
+                            <!-- Alert -->
+                            <div
+                                class="mt-6 flex gap-3 items-center bg-red-500/10 p-3 rounded border border-red-500/20">
+                                <i class="fa-solid fa-bell text-red-500 animate-pulse"></i>
+                                <div>
+                                    <div class="text-xs font-bold text-red-400">Exam Alert: Internals</div>
+                                    <div class="text-[10px] text-red-300/70">Scheduled for Monday (2 Days left)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  <section id="dashboard" class="py-20 bg-brand-card/30 relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold font-mono mb-4">Your Command Center</h2>
+                <p class="text-brand-muted max-w-2xl mx-auto">Every login lands you on a clean, intelligent dashboard. No confusion, just clarity.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[500px]">
+                
+                <div class="col-span-1 md:col-span-2 md:row-span-2 glass rounded-3xl p-8 flex flex-col justify-between hover:border-brand-accent/50 transition duration-300" data-aos="fade-up">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold">Today's Missions</h4>
+                            <span class="bg-brand-accent/20 text-brand-accent px-3 py-1 rounded-full text-xs font-bold">Priority High</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/5">
+                                <div class="w-5 h-5 rounded-full border-2 border-brand-muted"></div>
+                                <span class="text-sm">Complete Data Structures Module 4</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/5">
+                                <div class="w-5 h-5 rounded-full border-2 border-brand-muted"></div>
+                                <span class="text-sm">Review DBMS PYQs (Exam Tomorrow)</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/5">
+                                <div class="w-5 h-5 rounded-full border-2 border-brand-muted"></div>
+                                <span class="text-sm">Daily Coding Problem #402</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="w-full bg-brand-dark h-2 rounded-full overflow-hidden">
+                            <div class="bg-brand-success h-full w-[65%]"></div>
+                        </div>
+                        <div class="flex justify-between text-xs mt-2 text-brand-muted">
+                            <span>Daily Progress</span>
+                            <span>65%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass rounded-3xl p-6 flex flex-col justify-center items-center text-center hover:border-brand-cyan/50 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-fire text-orange-500 text-3xl mb-2"></i>
+                    <h4 class="text-4xl font-bold font-mono">12</h4>
+                    <p class="text-sm text-brand-muted">Day Streak</p>
+                </div>
+
+                <div class="glass rounded-3xl p-6 relative overflow-hidden hover:border-purple-500/50 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-lg font-bold mb-1">Employability</h4>
+                    <div class="text-3xl font-bold font-mono text-purple-400">720<span class="text-sm text-brand-muted">/1000</span></div>
+                    <p class="text-xs text-brand-muted mt-2">Create 1 project to reach 750.</p>
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-purple-500/20 rounded-full blur-xl"></div>
+                </div>
+
+                <div class="col-span-1 md:col-span-2 glass rounded-3xl p-6 flex items-center justify-between hover:border-yellow-500/50 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <h4 class="text-lg font-bold text-yellow-500">Weekly Quest</h4>
+                        <p class="text-sm text-brand-muted">Solve 5 Medium LeetCode problems.</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-2xl font-bold text-white">3/5</span>
+                        <div class="text-xs text-brand-muted">Completed</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+
+    <!-- SMART ONBOARDING Section -->
+    <section class="py-20 bg-[#0A0A0A] border-y border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-20">
+            <div class="md:w-1/2 relative" data-aos="fade-right">
+                <!-- Terminal Window Config -->
+                <div
+                    class="relative bg-[#0F1218] rounded-xl border border-white/10 shadow-2xl overflow-hidden font-mono text-sm leading-relaxed">
+                    <div class="bg-[#1a1f2e] px-4 py-2 flex gap-2 border-b border-white/5">
+                        <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                        <div class="ml-4 text-xs text-gray-500">setup_wizard.sh</div>
+                    </div>
+                    <div class="p-6 text-gray-300 space-y-2">
+                        <div><span class="text-green-500">➜</span> <span class="text-blue-400">~</span> ./configure
+                            --student</div>
+                        <div class="text-gray-500 mt-2">Initializing onboarding sequence...</div>
+
+                        <div class="mt-4 border-l-2 border-white/10 pl-4 py-2">
+                            <div class="text-cyan-400">[?] Select Branch:</div>
+                            <div class="text-white">> Computer Science & Engineering</div>
+                            <div class="text-cyan-400 mt-2">[?] Current Semester:</div>
+                            <div class="text-white">> Semester 5</div>
+                            <div class="text-cyan-400 mt-2">[?] Career Target:</div>
+                            <div class="text-white">> Full Stack Developer (MERN)</div>
+                        </div>
+
+                        <div class="text-green-400 mt-4">✓ Configuration saved.</div>
+                        <div class="text-gray-400">Generating personalized roadmap... <span
+                                class="animate-pulse">_</span></div>
+                    </div>
+                </div>
+                <!-- Background Glow -->
+                <div class="absolute -inset-10 bg-brand-cyan/20 blur-[60px] -z-10 rounded-full opacity-20"></div>
+            </div>
+
+            <div class="md:w-1/2" data-aos="fade-left">
+                <div
+                    class="inline-block px-3 py-1 rounded bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan text-xs font-mono font-bold mb-4">
+                    AUTO-CONFIGURATION
+                </div>
+                <h2 class="text-4xl font-bold font-mono mt-2 mb-6 text-white">Personalization in <br><span
+                        class="text-gray-500">2 Commands.</span></h2>
+                <p class="text-gray-400 mb-8 max-w-lg leading-relaxed">
+                    Skip the surveys. Just define your parameters, and our kernel generates a unique syllabus-mapped
+                    roadmap instantly.
+                </p>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="flex items-center gap-4 bg-white/5 p-4 rounded-lg border border-white/5">
+                        <div
+                            class="w-10 h-10 rounded bg-[#0F0F0F] flex items-center justify-center text-brand-cyan border border-white/10">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Dynamic Calibration</h4>
+                            <p class="text-xs text-gray-500">Adapts as you learn and grow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- learning Paths Section  -->
+    <section id="skills" class="py-20 bg-[#050505]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2
+                        class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 border-l-2 border-brand-accent pl-2">
+                        Skill-Verse</h2>
+                    <h3 class="text-4xl font-bold font-mono text-white">Choose Your <span
+                            class="text-gray-500">Character Class</span></h3>
+                </div>
+                <p
+                    class="text-gray-400 max-w-md mt-4 md:mt-0 text-sm font-mono border border-white/10 p-3 rounded bg-white/5">
+                    > Select a specialization to load the competency matrix.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="relative group bg-[#0F1014] border border-white/5 hover:border-blue-500/50 rounded-xl overflow-hidden transition-all duration-300"
+                    data-aos="fade-up">
+                    <div
+                        class="absolute top-0 w-full h-1 bg-gradient-to-r from-blue-500 to-transparent opacity-50 group-hover:opacity-100 transition">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between mb-6">
+                            <div
+                                class="w-10 h-10 bg-blue-500/10 rounded flex items-center justify-center text-blue-400 border border-blue-500/20">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <span class="text-[10px] font-mono text-gray-500 bg-white/5 px-2 py-1 rounded">v2.4</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2 font-mono">Full Stack</h4>
+                        <p class="text-xs text-brand-muted mb-4 leading-relaxed">
+                            MERN Stack mastery. Focus on scalable architecture and deployment.
+                        </p>
+                        <!-- Tech Tags -->
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] text-blue-300 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">React</span>
+                            <span
+                                class="text-[10px] text-blue-300 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">Next.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="relative group bg-[#0F1014] border border-white/5 hover:border-cyan-500/50 rounded-xl overflow-hidden transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="absolute top-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-transparent opacity-50 group-hover:opacity-100 transition">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between mb-6">
+                            <div
+                                class="w-10 h-10 bg-cyan-500/10 rounded flex items-center justify-center text-cyan-400 border border-cyan-500/20">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <span class="text-[10px] font-mono text-gray-500 bg-white/5 px-2 py-1 rounded">v1.1</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2 font-mono">AI & Data</h4>
+                        <p class="text-xs text-brand-muted mb-4 leading-relaxed">
+                            From Pandas to PyTorch. Build models that actually do things.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] text-cyan-300 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">Python</span>
+                            <span
+                                class="text-[10px] text-cyan-300 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">LLMs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="relative group bg-[#0F1014] border border-white/5 hover:border-purple-500/50 rounded-xl overflow-hidden transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="absolute top-0 w-full h-1 bg-gradient-to-r from-purple-500 to-transparent opacity-50 group-hover:opacity-100 transition">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between mb-6">
+                            <div
+                                class="w-10 h-10 bg-purple-500/10 rounded flex items-center justify-center text-purple-400 border border-purple-500/20">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <span class="text-[10px] font-mono text-gray-500 bg-white/5 px-2 py-1 rounded">CORE</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2 font-mono">DSA Core</h4>
+                        <p class="text-xs text-brand-muted mb-4 leading-relaxed">
+                            The foundation of everything. Algorithms, Graphs, and Optimization.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] text-purple-300 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">C++</span>
+                            <span
+                                class="text-[10px] text-purple-300 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="relative group bg-[#0F1014] border border-white/5 hover:border-orange-500/50 rounded-xl overflow-hidden transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="absolute top-0 w-full h-1 bg-gradient-to-r from-orange-500 to-transparent opacity-50 group-hover:opacity-100 transition">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between mb-6">
+                            <div
+                                class="w-10 h-10 bg-orange-500/10 rounded flex items-center justify-center text-orange-400 border border-orange-500/20">
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+                            <span class="text-[10px] font-mono text-gray-500 bg-white/5 px-2 py-1 rounded">v3.0</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2 font-mono">DevOps</h4>
+                        <p class="text-xs text-brand-muted mb-4 leading-relaxed">
+                            Scale it up. AWS, Docker, and CI/CD pipelines.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] text-orange-300 bg-orange-500/10 px-2 py-0.5 rounded border border-orange-500/20">AWS</span>
+                            <span
+                                class="text-[10px] text-orange-300 bg-orange-500/10 px-2 py-0.5 rounded border border-orange-500/20">K8s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Habit Engine section -->
+    <section class="py-24 bg-[#0B0F19] relative overflow-hidden">
+        <!-- Abstract Tech Background -->
+        <div
+            class="absolute right-0 top-0 w-[800px] h-[800px] bg-gradient-to-b from-purple-500/5 to-transparent rounded-full blur-3xl pointer-events-none -z-10">
+        </div>
+        <div
+            class="absolute left-10 bottom-10 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl pointer-events-none -z-10">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Left: Content -->
+                <div class="z-10" data-aos="fade-right">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-xs font-mono font-bold tracking-wider mb-6">
+                        <i class="fa-solid fa-bolt"></i> MOMENTUM ENGINE
+                    </div>
+
+                    <h2 class="text-4xl md:text-5xl font-bold font-mono text-white mb-6">
+                        Addiction,<br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">Engineered.</span>
+                    </h2>
+
+                    <p class="text-brand-muted text-lg mb-10 leading-relaxed">
+                        The hardest part of engineering isn't the difficulty. It's the consistency. We've built a
+                        psychological compounding engine that makes "not studying" feel like losing money.
+                    </p>
+
+                    <div class="space-y-6 mb-12">
+                        <!-- Feature 1: Streak -->
+                        <div
+                            class="group flex gap-4 p-4 rounded-xl hover:bg-white/5 transition duration-300 border border-transparent hover:border-white/5">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-[#1a1f2e] flex items-center justify-center shrink-0 border border-white/10 group-hover:border-amber-500/50 transition">
+                                <i class="fa-solid fa-fire text-amber-500 text-xl group-hover:scale-110 transition"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg mb-1">The Streak Protocol</h4>
+                                <p class="text-sm text-brand-muted">
+                                    Miss a day, your rank drops. It’s simple, ruthless, and incredibly effective at
+                                    building discipline.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2: XP -->
+                        <div
+                            class="group flex gap-4 p-4 rounded-xl hover:bg-white/5 transition duration-300 border border-transparent hover:border-white/5">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-[#1a1f2e] flex items-center justify-center shrink-0 border border-white/10 group-hover:border-purple-500/50 transition">
+                                <i
+                                    class="fa-solid fa-chart-line text-purple-500 text-xl group-hover:scale-110 transition"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg mb-1">Skill Valuation (XP)</h4>
+                                <p class="text-sm text-brand-muted">
+                                    Every problem solved adds to your "Market Value". Watch your virtual salary grow as
+                                    you learn.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 3: Leagues -->
+                        <div
+                            class="group flex gap-4 p-4 rounded-xl hover:bg-white/5 transition duration-300 border border-transparent hover:border-white/5">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-[#1a1f2e] flex items-center justify-center shrink-0 border border-white/10 group-hover:border-cyan-500/50 transition">
+                                <i
+                                    class="fa-solid fa-trophy text-cyan-500 text-xl group-hover:scale-110 transition"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg mb-1">Competitive Leagues</h4>
+                                <p class="text-sm text-brand-muted">
+                                    You aren't studying alone. You're competing in the <span
+                                        class="text-cyan-400">Diamond League</span> against the top 1% of students
+                                    nationwide.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="px-8 py-3.5 bg-white text-brand-dark rounded-lg font-bold hover:bg-gray-100 transition shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                            Start My Streak
+                        </button>
+                        <button
+                            class="px-8 py-3.5 border border-white/10 text-white rounded-lg font-bold hover:bg-white/5 transition flex items-center gap-2">
+                            View Leaderboard <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: High-Tech Player Card -->
+                <div class="relative" data-aos="fade-left">
+                    <div
+                        class="relative z-10 bg-[#151921]/90 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl transform rotate-1 hover:rotate-0 transition duration-500">
+                        <!-- Holographic Edge Effect -->
+                        <div
+                            class="absolute -inset-[1px] bg-gradient-to-b from-white/20 to-transparent rounded-2xl z-0 pointer-events-none opacity-50">
+                        </div>
+
+                        <!-- Card Header -->
+                        <div class="flex justify-between items-center mb-8 border-b border-white/5 pb-4">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-purple-600 p-[2px]">
+                                    <img src="https://ui-avatars.com/api/?name=Alex+R&background=0D1117&color=fff"
+                                        class="rounded-full w-full h-full" alt="Profile">
+                                </div>
+                                <div>
+                                    <div class="text-white font-bold font-mono">ALEX_R</div>
+                                    <div class="text-[10px] text-brand-muted uppercase tracking-widest">Level 42
+                                        Architect</div>
+                                </div>
+                            </div>
+                            <div
+                                class="px-3 py-1 rounded bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                                TOP 4.2%
+                            </div>
+                        </div>
+
+                        <!-- Main Stats Grid -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <!-- Stat 1 -->
+                            <div class="bg-[#0B0F19] p-4 rounded-xl border border-white/5">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-xs text-brand-muted uppercase">Consistency</span>
+                                    <i class="fa-solid fa-fire text-amber-500 text-sm"></i>
+                                </div>
+                                <div class="text-2xl font-bold text-white font-mono">14 Days</div>
+                                <div class="w-full h-1 bg-white/10 rounded-full mt-3 overflow-hidden">
+                                    <div class="h-full w-[70%] bg-amber-500 rounded-full"></div>
+                                </div>
+                            </div>
+                            <!-- Stat 2 -->
+                            <div class="bg-[#0B0F19] p-4 rounded-xl border border-white/5">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-xs text-brand-muted uppercase">Problems</span>
+                                    <i class="fa-solid fa-code text-cyan-500 text-sm"></i>
+                                </div>
+                                <div class="text-2xl font-bold text-white font-mono">842</div>
+                                <div class="w-full h-1 bg-white/10 rounded-full mt-3 overflow-hidden">
+                                    <div class="h-full w-[45%] bg-cyan-500 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Heatmap Visual -->
+                        <div class="bg-[#0B0F19] p-4 rounded-xl border border-white/5 mb-6">
+                            <div class="flex justify-between items-end mb-3">
+                                <span class="text-xs text-brand-muted uppercase">Activity Graph</span>
+                                <span class="text-[10px] text-green-400 font-mono">+24% vs Last Week</span>
+                            </div>
+                            <!-- Fake Heatmap Grid -->
+                            <div class="flex gap-1 justify-between">
+                                <div class="space-y-1">
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-green-500/40"></div> <!-- Active -->
+                                    <div class="w-3 h-3 rounded-sm bg-green-500/80"></div> <!-- High Active -->
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="w-3 h-3 rounded-sm bg-green-500/20"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-green-500/60"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-green-500"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-green-500/40"></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="w-3 h-3 rounded-sm bg-green-500/90"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-green-500/20"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-green-500/30"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-green-500/50"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="w-3 h-3 rounded-sm bg-green-500"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-green-500"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-green-500/50"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-white/5"></div>
+                                    <div class="w-3 h-3 rounded-sm bg-green-500/20"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="text-center">
+                            <p class="text-[10px] text-gray-500 font-mono">SYSTEM ID: 884-XJ-92</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge behind -->
+                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl -z-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Practice Arena section -->
+    <section class="py-24 bg-brand-dark relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-1/2 left-0 w-full h-[500px] bg-brand-accent/5 -skew-y-6 pointer-events-none"></div>
+        <div class="absolute right-0 top-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-mono font-bold tracking-wider mb-4">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        LIVE ENVIRONMENT
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-bold font-mono text-white">The Practice <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">Arena</span>
+                    </h2>
+                    <p class="text-brand-muted mt-4 max-w-lg text-lg">
+                        Talk is cheap. Show me the code. A fully integrated practice environment to sharpen your edge.
+                    </p>
+                </div>
+                <!-- Stats Snippet -->
+                <div class="hidden md:flex gap-8 border-l border-white/10 pl-8">
+                    <div>
+                        <div class="text-2xl font-bold text-white font-mono">1.2M+</div>
+                        <div class="text-xs text-brand-muted uppercase tracking-wider">Lines Compiled</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-white font-mono">850+</div>
+                        <div class="text-xs text-brand-muted uppercase tracking-wider">Active Challenges</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Practice Modules Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+
+                <!-- Card 1: DSA (Blue Theme) -->
+                <div class="group relative bg-[#0F131C] rounded-2xl border border-white/5 hover:border-blue-500/50 transition-all duration-300 overflow-hidden hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]"
+                    data-aos="fade-up">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                    </div>
+
+                    <div class="p-8 relative z-10">
+                        <div class="flex justify-between items-start mb-8">
+                            <div
+                                class="p-3 bg-blue-500/10 rounded-lg border border-blue-500/20 text-blue-400 group-hover:scale-110 transition duration-300">
+                                <i class="fa-solid fa-code text-xl"></i>
+                            </div>
+                            <i
+                                class="fa-solid fa-arrow-right text-brand-muted group-hover:text-blue-400 group-hover:translate-x-1 transition"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white mb-2 font-mono group-hover:text-blue-400 transition">
+                            Algorithms Lab</h3>
+                        <p class="text-sm text-brand-muted mb-6 leading-relaxed">
+                            Structured DSA mastery. From basics to Graph Theory. Auto-graded with edge-case analysis.
+                        </p>
+
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
+                                <div class="w-full bg-white/5 rounded-full h-1.5">
+                                    <div class="w-[60%] h-full bg-blue-500 rounded-full"></div>
+                                </div>
+                                <span>12/20</span>
+                            </div>
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400 border border-white/5">C++</span>
+                                <span
+                                    class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400 border border-white/5">Java</span>
+                                <span
+                                    class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400 border border-white/5">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: System Design / Aptitude (Purple Theme) -->
+                <div class="group relative bg-[#0F131C] rounded-2xl border border-white/5 hover:border-purple-500/50 transition-all duration-300 overflow-hidden hover:shadow-[0_0_30px_rgba(168,85,247,0.1)]"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                    </div>
+
+                    <div class="p-8 relative z-10">
+                        <div class="flex justify-between items-start mb-8">
+                            <div
+                                class="p-3 bg-purple-500/10 rounded-lg border border-purple-500/20 text-purple-400 group-hover:scale-110 transition duration-300">
+                                <i class="fa-solid fa-network-wired text-xl"></i>
+                            </div>
+                            <i
+                                class="fa-solid fa-arrow-right text-brand-muted group-hover:text-purple-400 group-hover:translate-x-1 transition"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white mb-2 font-mono group-hover:text-purple-400 transition">
+                            Logic & Systems</h3>
+                        <p class="text-sm text-brand-muted mb-6 leading-relaxed">
+                            Quantitative aptitude and Low Level Design (LLD) challenges to build your problem-solving
+                            core.
+                        </p>
+
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
+                                <div class="w-full bg-white/5 rounded-full h-1.5">
+                                    <div class="w-[30%] h-full bg-purple-500 rounded-full"></div>
+                                </div>
+                                <span>Level 4</span>
+                            </div>
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400 border border-white/5">Logic</span>
+                                <span
+                                    class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400 border border-white/5">Quant</span>
+                                <span
+                                    class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400 border border-white/5">OOPs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Projects (Emerald/Cyan Theme) -->
+                <div class="group relative bg-[#0F131C] rounded-2xl border border-white/5 hover:border-emerald-500/50 transition-all duration-300 overflow-hidden hover:shadow-[0_0_30px_rgba(16,185,129,0.1)]"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                    </div>
+
+                    <div class="p-8 relative z-10">
+                        <div class="flex justify-between items-start mb-8">
+                            <div
+                                class="p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/20 text-emerald-400 group-hover:scale-110 transition duration-300">
+                                <i class="fa-solid fa-layer-group text-xl"></i>
+                            </div>
+                            <i
+                                class="fa-solid fa-arrow-right text-brand-muted group-hover:text-emerald-400 group-hover:translate-x-1 transition"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white mb-2 font-mono group-hover:text-emerald-400 transition">
+                            Build Station</h3>
+                        <p class="text-sm text-brand-muted mb-6 leading-relaxed">
+                            Don't just code. Build. Guided, project-based learning tracks for React, Node, and AI.
+                        </p>
+
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
+                                <div class="w-full bg-white/5 rounded-full h-1.5">
+                                    <div class="w-[85%] h-full bg-emerald-500 rounded-full"></div>
+                                </div>
+                                <span>Ready to Deploy</span>
+                            </div>
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400 border border-white/5">Web</span>
+                                <span
+                                    class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400 border border-white/5">App</span>
+                                <span
+                                    class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400 border border-white/5">AI
+                                    Models</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- IDE Simulator -->
+            <div class="w-full rounded-xl bg-[#0B0E14] border border-white/10 overflow-hidden shadow-2xl relative"
+                data-aos="fade-up" data-aos-delay="300">
+                <!-- Mac-like Header -->
+                <div class="bg-[#151921] px-4 py-3 flex items-center justify-between border-b border-white/5">
+                    <div class="flex gap-2">
+                        <div class="w-3 h-3 rounded-full bg-[#FF5F56]"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#27C93F]"></div>
+                    </div>
+                    <div class="text-xs font-mono text-gray-500 select-none">main.cpp - Engi-Sphere IDE</div>
+                    <div class="w-16"></div> <!-- Spacer for centering -->
+                </div>
+
+                <div class="grid md:grid-cols-4">
+                    <!-- Sidebar -->
+                    <div class="hidden md:block col-span-1 border-r border-white/5 bg-[#0F1218] p-4 text-sm font-mono">
+                        <div class="text-gray-500 mb-2 text-xs uppercase tracking-wider">Explorer</div>
+                        <div class="space-y-1">
+                            <div class="text-blue-400 flex items-center gap-2 bg-white/5 p-1.5 rounded cursor-pointer">
+                                <i class="fa-regular fa-file-code"></i> main.cpp
+                            </div>
+                            <div
+                                class="text-gray-500 flex items-center gap-2 hover:text-gray-300 p-1.5 transition cursor-pointer">
+                                <i class="fa-regular fa-file"></i> input.txt
+                            </div>
+                            <div
+                                class="text-gray-500 flex items-center gap-2 hover:text-gray-300 p-1.5 transition cursor-pointer">
+                                <i class="fa-regular fa-file"></i> README.md
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Code Area -->
+                    <div class="col-span-3 p-6 font-mono text-sm relative group cursor-text">
+                        <div class="absolute top-4 right-4 flex gap-2">
+                            <button
+                                class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-1.5 rounded-md text-xs font-bold transition shadow-[0_0_15px_rgba(22,163,74,0.3)]">
+                                <i class="fa-solid fa-play"></i> RUN
+                            </button>
+                        </div>
+
+                        <div class="space-y-1 text-gray-300">
+                            <div class="flex gap-4"><span class="text-gray-600 select-none">1</span> <span
+                                    class="text-purple-400">#include</span> <span
+                                    class="text-emerald-400">&lt;iostream&gt;</span></div>
+                            <div class="flex gap-4"><span class="text-gray-600 select-none">2</span> <span
+                                    class="text-purple-400">using</span> <span class="text-purple-400">namespace</span>
+                                std;</div>
+                            <div class="flex gap-4"><span class="text-gray-600 select-none">3</span> </div>
+                            <div class="flex gap-4"><span class="text-gray-600 select-none">4</span> <span
+                                    class="text-purple-400">int</span> <span class="text-yellow-400">main</span>() {
+                            </div>
+                            <div class="flex gap-4"><span class="text-gray-600 select-none">5</span> <span
+                                    class="pl-4"><span class="text-gray-500">// Your journey begins here</span></span>
+                            </div>
+                            <div class="flex gap-4"><span class="text-gray-600 select-none">6</span> <span
+                                    class="pl-4">cout &lt;&lt; <span class="text-emerald-400">"Hello, Engineer!"</span>
+                                    &lt;&lt; endl;</span></div>
+                            <div class="flex gap-4"><span class="text-gray-600 select-none">7</span> <span
+                                    class="pl-4"><span class="text-purple-400">return</span> <span
+                                        class="text-orange-400">0</span>;</span></div>
+                            <div class="flex gap-4"><span class="text-gray-600 select-none">8</span> }</div>
+                        </div>
+
+                        <div class="mt-8 pt-4 border-t border-white/10">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-xs text-brand-muted uppercase">Terminal</span>
+                                <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                            </div>
+                            <div class="font-mono text-sm text-gray-400">
+                                <span class="text-green-500">➜</span> <span class="text-blue-400">~/project</span> g++
+                                main.cpp -o main && ./main<br>
+                                <span class="text-white">Hello, Engineer!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-[#0B0E14] relative overflow-hidden">
+        <div class="absolute right-0 top-1/2 w-full h-[500px] bg-brand-accent/5 -skew-y-3 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-400 text-xs font-mono font-bold tracking-wider mb-4">
+                        <i class="fa-solid fa-code-branch"></i> OPEN SOURCE
+                    </div>
+                    <h2 class="text-4xl font-bold font-mono text-white">The Project <span
+                            class="text-teal-400">Forge</span></h2>
+                </div>
+                <p class="text-brand-muted mt-4 md:mt-0 max-w-lg text-right font-mono text-sm">
+                    Don't build alone. Find teammates, fork ideas, and commit code.<br>
+                    <span class="text-teal-500">git checkout -b new-feature</span>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Repo Card 1 -->
+                <div
+                    class="group bg-[#151921] rounded-xl border border-white/5 p-6 hover:border-teal-500/30 transition duration-300 flex flex-col h-full hover:shadow-[0_0_20px_rgba(20,184,166,0.1)]">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-regular fa-folder-open text-teal-400"></i>
+                            <span class="text-blue-400 font-mono text-sm">face-recog-sys</span>
+                        </div>
+                        <span class="text-xs border border-white/10 px-2 py-1 rounded text-gray-400">Public</span>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Smart Attendance System</h3>
+                    <p class="text-sm text-gray-500 mb-6 flex-grow font-mono">
+                        Building a face-recognition based attendance system using React and Python OpenCV.
+                    </p>
+
+                    <div class="flex items-center gap-4 text-xs text-gray-400 mb-6 font-mono">
+                        <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                            Python</div>
+                        <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                            React</div>
+                    </div>
+
+                    <div class="flex justify-between items-center pt-4 border-t border-white/5 mt-auto">
+                        <div class="flex -space-x-2">
+                            <img class="w-6 h-6 rounded-full border border-[#151921] bg-gray-700"
+                                src="https://ui-avatars.com/api/?name=Alex&background=random" alt="User">
+                            <img class="w-6 h-6 rounded-full border border-[#151921] bg-gray-700"
+                                src="https://ui-avatars.com/api/?name=Sam&background=random" alt="User">
+                        </div>
+                        <div class="flex gap-3 text-xs text-gray-500">
+                            <span><i class="fa-regular fa-star"></i> 12</span>
+                            <span><i class="fa-solid fa-code-branch"></i> 4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repo Card 2 -->
+                <div
+                    class="group bg-[#151921] rounded-xl border border-white/5 p-6 hover:border-teal-500/30 transition duration-300 flex flex-col h-full hover:shadow-[0_0_20px_rgba(20,184,166,0.1)]">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-regular fa-folder-open text-teal-400"></i>
+                            <span class="text-blue-400 font-mono text-sm">agri-ai-model</span>
+                        </div>
+                        <span
+                            class="text-xs border border-teal-500/20 bg-teal-500/10 text-teal-400 px-2 py-1 rounded">Mentor
+                            Verified</span>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Crop Disease Detection</h3>
+                    <p class="text-sm text-gray-500 mb-6 flex-grow font-mono">
+                        CNN model to detect disease in plant leaves. Mobile-first approach.
+                    </p>
+
+                    <div class="flex items-center gap-4 text-xs text-gray-400 mb-6 font-mono">
+                        <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                            Python</div>
+                        <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-green-400"></span> TF
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center pt-4 border-t border-white/5 mt-auto">
+                        <div class="flex -space-x-2">
+                            <img class="w-6 h-6 rounded-full border border-[#151921] bg-gray-700"
+                                src="https://ui-avatars.com/api/?name=John&background=random" alt="User">
+                        </div>
+                        <div class="flex gap-3 text-xs text-gray-500">
+                            <span><i class="fa-regular fa-star"></i> 28</span>
+                            <span><i class="fa-solid fa-code-branch"></i> 8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Idea Generator -->
+                <div
+                    class="group bg-[#151921] rounded-xl border border-dashed border-white/10 p-6 hover:border-teal-500/50 transition duration-300 flex flex-col justify-center items-center text-center h-full">
+                    <div
+                        class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mb-4 group-hover:bg-teal-500/20 group-hover:text-teal-400 transition">
+                        <i class="fa-solid fa-lightbulb text-xl text-gray-400 group-hover:text-teal-400"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Initialize Repository</h3>
+                    <p class="text-sm text-gray-500 mb-6 font-mono">
+                        Don't have an idea? Use our AI Generator to find unique problem statements.
+                    </p>
+                    <button class="text-teal-400 text-sm font-bold hover:underline font-mono">
+                        > ./generate_idea.sh
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Micro Internships section -->
+    <section class="py-24 bg-[#080808] border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 order-1 md:order-2" data-aos="fade-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs font-mono font-bold tracking-wider mb-4">
+                        <i class="fa-solid fa-briefcase"></i> INDUSTRY SIMULATION
+                    </div>
+                    <h2 class="text-4xl font-bold font-mono text-white mb-6">Micro-Internships.<br><span
+                            class="text-gray-500">Real Tickets. Real Code.</span></h2>
+                    <p class="text-brand-muted mb-8 text-lg font-light leading-relaxed">
+                        Break out of the "No Experience = No Job" loop. Solve 1-week sprint tickets that mimic real
+                        industry tasks (Jira-style).
+                    </p>
+                    <ul class="space-y-4 font-mono text-sm text-gray-400">
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="w-6 h-6 rounded flex items-center justify-center bg-green-500/10 text-green-500 border border-green-500/20"><i
+                                    class="fa-solid fa-check text-xs"></i></span>
+                            Verified 'Experience Credits'
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="w-6 h-6 rounded flex items-center justify-center bg-green-500/10 text-green-500 border border-green-500/20"><i
+                                    class="fa-solid fa-check text-xs"></i></span>
+                            Code Review by AI & Mentors
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="w-6 h-6 rounded flex items-center justify-center bg-green-500/10 text-green-500 border border-green-500/20"><i
+                                    class="fa-solid fa-check text-xs"></i></span>
+                            Use in your Resume
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="md:w-1/2 order-2 md:order-1 relative" data-aos="fade-up">
+                    <div class="absolute -inset-4 bg-amber-500/10 blur-[50px] rounded-full"></div>
+                    <!-- Kanban Board Visual -->
+                    <div
+                        class="relative bg-[#101010] rounded-xl border border-white/10 shadow-2xl p-4 md:p-6 max-w-md mx-auto transform rotate-1 hover:rotate-0 transition duration-500">
+                        <div class="flex justify-between items-center mb-6 border-b border-white/5 pb-4">
+                            <h4 class="font-bold text-white font-mono flex items-center gap-2">
+                                <i class="fa-brands fa-jira text-blue-400"></i> SPRINT BOARD
+                            </h4>
+                            <span class="text-xs bg-white/5 text-gray-400 px-2 py-1 rounded">Active Sprint</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Card 1 -->
+                            <div
+                                class="bg-[#1a1a1a] p-4 rounded border border-l-4 border-l-amber-500 border-white/5 opacity-60">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-[10px] text-gray-500 font-mono">TICKET-401</span>
+                                    <span
+                                        class="text-[10px] bg-green-500/10 text-green-500 px-1.5 py-0.5 rounded border border-green-500/20">DONE</span>
+                                </div>
+                                <div class="text-sm text-gray-400 line-through">Setup MongoDB Schema</div>
+                            </div>
+
+                            <!-- Card 2 Main -->
+                            <div
+                                class="bg-[#1a1a1a] p-5 rounded border border-l-4 border-l-red-500 border-white/10 shadow-lg relative group overflow-hidden">
+                                <div class="absolute inset-0 bg-red-500/5 opacity-0 group-hover:opacity-100 transition">
+                                </div>
+                                <div class="flex justify-between mb-3 relative z-10">
+                                    <span class="text-[10px] text-gray-400 font-mono">TICKET-402</span>
+                                    <span
+                                        class="text-[10px] bg-red-500/10 text-red-500 px-1.5 py-0.5 rounded border border-red-500/20 font-bold tracking-wide">HIGH
+                                        PRIORITY</span>
+                                </div>
+                                <h5 class="text-white font-bold text-base mb-2 relative z-10">Fix API Latency</h5>
+                                <p class="text-xs text-gray-500 mb-4 font-mono relative z-10">
+                                    Login endpoint > 2000ms. Refactor SQL query...
+                                </p>
+                                <div class="flex items-center gap-2 relative z-10">
+                                    <img src="https://ui-avatars.com/api/?name=You&background=random"
+                                        class="w-6 h-6 rounded-full border border-black">
+                                    <button
+                                        class="ml-auto text-xs bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded transition shadow-lg shadow-red-500/20">Start
+                                        Task</button>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div
+                                class="bg-[#1a1a1a] p-4 rounded border border-l-4 border-l-blue-500 border-white/5 opacity-60">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-[10px] text-gray-500 font-mono">TICKET-403</span>
+                                    <span
+                                        class="text-[10px] bg-blue-500/10 text-blue-500 px-1.5 py-0.5 rounded border border-blue-500/20">TODO</span>
+                                </div>
+                                <div class="text-sm text-gray-400">Implement OAuth2 Flow</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="py-24 bg-[#050505] border-t border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 text-xs font-mono font-bold tracking-wider mb-4">
+                        <i class="fa-solid fa-rss"></i> ONLINE NETWORKING
+                    </div>
+                    <h2 class="text-4xl font-bold font-mono mt-2 mb-6 text-white">The Engineer's <span
+                            class="text-indigo-400">Hub</span></h2>
+                    <p class="text-brand-muted text-lg mb-8 font-light leading-relaxed">
+                        No more dead WhatsApp groups. A verified, topic-based community to clear doubts, find hackathon
+                        teams, and network.
+                    </p>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center shrink-0 border border-indigo-500/20 group-hover:bg-indigo-500 group-hover:text-white transition duration-300">
+                                <i class="fa-solid fa-hashtag text-indigo-400 text-xl group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg mb-1 group-hover:text-indigo-400 transition">
+                                    Topic-Based Channels</h4>
+                                <p class="text-sm text-gray-500">Separated spaces for #frontend, #dsa-help, #gate-prep.
+                                    Low noise, high signal.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center shrink-0 border border-indigo-500/20 group-hover:bg-indigo-500 group-hover:text-white transition duration-300">
+                                <i class="fa-solid fa-user-group text-indigo-400 text-xl group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg mb-1 group-hover:text-indigo-400 transition">
+                                    Peer Study Squads</h4>
+                                <p class="text-sm text-gray-500">Auto-match with students on the same path (e.g., MERN)
+                                    to stay accountable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 w-full" data-aos="fade-left">
+                    <!-- Discord/Slack UI Mockup -->
+                    <div class="bg-[#0F1218] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                        <!-- Header -->
+                        <div class="bg-[#1a1f2e] p-3 border-b border-black flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-hashtag text-gray-500"></i>
+                                <span class="text-white font-bold text-sm">dsa-dungeon</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="flex -space-x-2">
+                                    <div class="w-6 h-6 rounded-full bg-gray-600 border border-[#1a1f2e]"></div>
+                                    <div class="w-6 h-6 rounded-full bg-gray-500 border border-[#1a1f2e]"></div>
+                                    <div
+                                        class="w-6 h-6 rounded-full bg-green-500 border border-[#1a1f2e] text-[8px] flex items-center justify-center text-black font-bold">
+                                        42</div>
+                                </div>
+                                <i class="fa-solid fa-magnifying-glass text-gray-500 text-xs"></i>
+                            </div>
+                        </div>
+
+                        <!-- Chat Area -->
+                        <div class="p-4 space-y-4 bg-[#11131a] relative min-h-[300px]">
+                            <!-- Message 1 -->
+                            <div class="flex gap-3 hover:bg-white/[0.02] p-2 rounded -mx-2 transition">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center text-white text-xs font-bold shrink-0">
+                                    JD</div>
+                                <div>
+                                    <div class="flex items-baseline gap-2 mb-1">
+                                        <span class="text-red-400 text-sm font-bold">Jay_Dev</span>
+                                        <span class="text-[10px] text-gray-600">Today at 10:42 AM</span>
+                                    </div>
+                                    <p class="text-gray-300 text-sm leading-relaxed">
+                                        Guys, getting TLE on the Graph BFS problem (Q240). Is the adjacency matrix
+                                        causing the overhead?
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Message 2 -->
+                            <div class="flex gap-3 hover:bg-white/[0.02] p-2 rounded -mx-2 transition">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold shrink-0">
+                                    AS</div>
+                                <div>
+                                    <div class="flex items-baseline gap-2 mb-1">
+                                        <span class="text-indigo-400 text-sm font-bold">Ananya_S</span>
+                                        <span class="text-[10px] text-gray-600">Today at 10:45 AM</span>
+                                    </div>
+                                    <p class="text-gray-300 text-sm leading-relaxed">
+                                        <span class="text-blue-400">@Jay_Dev</span> Yes, for V > 10^4, matrix is O(V^2).
+                                        Switch to Adjacency List. Here is the snippet:
+                                    </p>
+                                    <div
+                                        class="mt-2 bg-[#08090c] p-3 rounded text-xs font-mono text-gray-400 border-l-2 border-indigo-500">
+                                        <span class="text-purple-400">vector</span>&lt;<span
+                                            class="text-purple-400">int</span>&gt; adj[V];
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Input Area -->
+                        <div class="p-3 bg-[#1a1f2e] mx-4 mb-4 rounded-lg flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-gray-600 flex items-center justify-center"><i
+                                    class="fa-solid fa-plus text-xs text-white"></i></div>
+                            <div class="text-gray-500 text-sm">Message #dsa-dungeon</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competitions" class="py-24 bg-[#0B0E14] relative">
+        <div class="max-w-7xl mx-auto px-6 mb-16 text-center">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-xs font-mono font-bold tracking-wider mb-4">
+                <i class="fa-solid fa-trophy"></i> RANKED MATCHMAKING
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold font-mono mb-4 text-white">Global <span
+                    class="text-yellow-500">Leaderboard</span></h2>
+            <p class="text-brand-muted max-w-2xl mx-auto font-mono text-sm text-gray-400">
+                > Compete in daily algorithms contests.<br>
+                > Represent your University. Dominate the charts.
+            </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Contest Card 1 -->
+                <div class="group relative bg-[#151921] rounded-xl border border-white/5 p-6 hover:border-yellow-500/30 transition duration-300 overflow-hidden"
+                    data-aos="fade-up">
+                    <div
+                        class="absolute top-0 right-0 bg-yellow-500/10 text-yellow-500 text-[10px] font-bold px-2 py-1 rounded-bl border-b border-l border-yellow-500/20 font-mono">
+                        LIVE</div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-12 h-12 bg-yellow-500/10 rounded flex items-center justify-center text-yellow-500 border border-yellow-500/20 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white font-mono">Bi-Weekly Wars</h3>
+                            <div class="text-[10px] text-gray-500 font-mono">Starts in: <span
+                                    class="text-yellow-500">00:45:12</span></div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between text-xs text-gray-400 font-mono border-b border-white/5 pb-2">
+                            <span>Difficulty</span>
+                            <span class="text-white">Medium - Hard</span>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-400 font-mono border-b border-white/5 pb-2">
+                            <span>Rewards</span>
+                            <span class="text-white">1500 XP</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full py-2 bg-yellow-500 hover:bg-yellow-400 text-black font-bold rounded text-xs transition uppercase tracking-wide">
+                        Enter Lobby
+                    </button>
+                </div>
+
+                <!-- Leaderboard Card -->
+                <div class="group md:col-span-1 lg:col-span-1 bg-[#151921] rounded-xl border border-white/5 p-0 overflow-hidden hover:border-blue-500/30 transition duration-300 flex flex-col"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-[#1a1f2e] p-4 border-b border-white/5 flex justify-between items-center">
+                        <h3 class="font-bold text-white font-mono text-sm"><i
+                                class="fa-solid fa-list-ol text-blue-400 mr-2"></i>Top Universities</h3>
+                        <span
+                            class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded border border-blue-500/20">NATIONAL</span>
+                    </div>
+                    <div class="p-4 space-y-2 flex-grow">
+                        <!-- Rank 1 -->
+                        <div class="flex items-center gap-3 p-2 rounded bg-yellow-500/5 border border-yellow-500/10">
+                            <span class="text-yellow-500 font-bold font-mono text-lg w-6 text-center">1</span>
+                            <div class="flex-grow">
+                                <div class="text-xs text-white font-bold">IIT Bombay</div>
+                                <div class="text-[10px] text-gray-500">9,842 Points</div>
+                            </div>
+                            <i class="fa-solid fa-trophy text-yellow-500"></i>
+                        </div>
+                        <!-- Rank 2 -->
+                        <div class="flex items-center gap-3 p-2 rounded bg-white/5 border border-white/5 opacity-80">
+                            <span class="text-gray-400 font-bold font-mono text-lg w-6 text-center">2</span>
+                            <div class="flex-grow">
+                                <div class="text-xs text-white font-bold">VIT Vellore</div>
+                                <div class="text-[10px] text-gray-500">9,420 Points</div>
+                            </div>
+                        </div>
+                        <!-- Rank 3 -->
+                        <div class="flex items-center gap-3 p-2 rounded bg-white/5 border border-white/5 opacity-60">
+                            <span class="text-yellow-700 font-bold font-mono text-lg w-6 text-center">3</span>
+                            <div class="flex-grow">
+                                <div class="text-xs text-white font-bold">BITS Pilani</div>
+                                <div class="text-[10px] text-gray-500">8,900 Points</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 border-t border-white/5 text-center">
+                        <a href="#"
+                            class="text-[10px] text-gray-400 hover:text-white transition uppercase tracking-wider">View
+                            Full Rankings</a>
+                    </div>
+                </div>
+
+                <!-- Hackathon Card -->
+                <div class="group relative bg-[#151921] rounded-xl border border-white/5 p-6 hover:border-purple-500/30 transition duration-300 overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="absolute top-0 right-0 bg-purple-500/10 text-purple-500 text-[10px] font-bold px-2 py-1 rounded-bl border-b border-l border-purple-500/20 font-mono">
+                        REG OPEN</div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-12 h-12 bg-purple-500/10 rounded flex items-center justify-center text-purple-500 border border-purple-500/20 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white font-mono">48H Debug-Thon</h3>
+                            <div class="text-[10px] text-gray-500 font-mono">Theme: <span
+                                    class="text-purple-400">FinTech</span></div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between text-xs text-gray-400 font-mono border-b border-white/5 pb-2">
+                            <span>Team Size</span>
+                            <span class="text-white">2 - 4 Members</span>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-400 font-mono border-b border-white/5 pb-2">
+                            <span>Prize Pool</span>
+                            <span class="text-white">₹50,000</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full py-2 bg-transparent border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold rounded text-xs transition uppercase tracking-wide">
+                        Register Team
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentorship Section: Senior Uplink -->
+    <section id="mentorship" class="py-24 bg-[#0B0E14] relative overflow-hidden border-b border-white/5">
+        <!-- Background Grid & Glow -->
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+        <div class="absolute left-0 bottom-0 w-96 h-96 bg-rose-600/5 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Left Content -->
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded bg-rose-500/10 border border-rose-500/20 text-rose-500 text-xs font-mono font-bold tracking-wider mb-4">
+                        <i class="fa-solid fa-satellite-dish"></i> SECURE_UPLINK_V2
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold font-mono text-white mb-6">Mentor <span
+                            class="text-rose-500">Protocol</span></h2>
+                    <p class="text-brand-muted text-lg mb-8 font-light leading-relaxed font-mono">
+                        > Establishing connection with industry veterans...<br>
+                        <span class="text-gray-500 text-base font-sans mt-2 block">
+                            Stop guessing. Get raw, unfiltered feedback on your code and career from engineers at
+                            Google, Amazon, and top startups. 1:1 sessions, no fluff.
+                        </span>
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Feature 1 -->
+                        <div
+                            class="group p-4 bg-[#151921] border border-white/5 rounded-xl hover:border-rose-500/30 transition duration-300">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div
+                                    class="w-8 h-8 rounded bg-rose-500/10 flex items-center justify-center text-rose-500 border border-rose-500/20">
+                                    <i class="fa-solid fa-bug"></i>
+                                </div>
+                                <h4 class="text-white font-bold font-mono text-sm">Code_Audit</h4>
+                            </div>
+                            <p class="text-xs text-gray-500">Senior engineers review your PRs line-by-line. Fix bad
+                                patterns early.</p>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div
+                            class="group p-4 bg-[#151921] border border-white/5 rounded-xl hover:border-rose-500/30 transition duration-300">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div
+                                    class="w-8 h-8 rounded bg-rose-500/10 flex items-center justify-center text-rose-500 border border-rose-500/20">
+                                    <i class="fa-solid fa-microphone-lines"></i>
+                                </div>
+                                <h4 class="text-white font-bold font-mono text-sm">Mock_Interview.exe</h4>
+                            </div>
+                            <p class="text-xs text-gray-500">System Design & DSA rounds simulated under real pressure
+                                conditions.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex items-center gap-4">
+                        <button
+                            class="px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-lg transition shadow-[0_0_20px_rgba(225,29,72,0.3)] font-mono text-sm">
+                            REQUEST_ACCESS
+                        </button>
+                        <div class="text-xs text-rose-400 font-mono flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                            14 Mentors Online
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual: Comms Terminal -->
+                <div class="lg:w-1/2 w-full" data-aos="fade-left">
+                    <div
+                        class="relative bg-[#0F1218] rounded-xl border border-white/10 shadow-2xl overflow-hidden group">
+                        <!-- Terminal Header -->
+                        <div class="bg-[#1a1f2e] px-4 py-3 border-b border-white/5 flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-lock text-rose-500 text-xs"></i>
+                                <span class="text-xs font-mono text-gray-400">ENCRYPTED_CHANNEL: 443</span>
+                            </div>
+                            <div class="text-[10px] font-mono text-rose-500 animate-pulse">RECORDING...</div>
+                        </div>
+
+                        <!-- Video Feed Simulation -->
+                        <div class="relative h-[300px] bg-[#050505] flex items-center justify-center overflow-hidden">
+                            <!-- Scanlines -->
+                            <div
+                                class="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px] opacity-20 pointer-events-none z-10">
+                            </div>
+
+                            <!-- Mentor Avatar (Large) -->
+                            <div class="text-center z-0 scale-100 group-hover:scale-105 transition duration-700">
+                                <div class="relative w-32 h-32 mx-auto mb-4">
+                                    <div
+                                        class="absolute inset-0 border-2 border-rose-500/30 rounded-full animate-[spin_10s_linear_infinite]">
+                                    </div>
+                                    <div
+                                        class="absolute -inset-2 border border-rose-500/10 rounded-full animate-[spin_15s_linear_infinite_reverse]">
+                                    </div>
+                                    <img src="https://ui-avatars.com/api/?name=Sarah+Chen&background=151921&color=fff"
+                                        class="w-full h-full rounded-full border-2 border-rose-500 relative z-10 p-1 bg-black">
+                                    <div
+                                        class="absolute bottom-0 right-0 w-6 h-6 bg-green-500 border-4 border-black rounded-full z-20">
+                                    </div>
+                                </div>
+                                <h3 class="text-white font-bold font-mono text-xl">Sarah_Chen</h3>
+                                <p class="text-rose-500 text-sm font-mono">Senior Arch @ Netflix</p>
+                            </div>
+
+                            <!-- Overlay UI -->
+                            <div class="absolute top-4 left-4 z-20">
+                                <div
+                                    class="px-2 py-1 bg-black/50 backdrop-blur border border-white/10 rounded text-[10px] font-mono text-green-400">
+                                    bitrate: 4096 kbps
+                                </div>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4 z-20 flex justify-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white/10 backdrop-blur flex items-center justify-center hover:bg-rose-600 transition cursor-pointer text-white border border-white/10">
+                                    <i class="fa-solid fa-microphone-slash"></i>
+                                </div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center hover:bg-red-700 transition cursor-pointer text-white shadow-lg shadow-red-600/30">
+                                    <i class="fa-solid fa-phone-slash"></i>
+                                </div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white/10 backdrop-blur flex items-center justify-center hover:bg-white/20 transition cursor-pointer text-white border border-white/10">
+                                    <i class="fa-solid fa-video"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chat/Context Log below video -->
+                        <div
+                            class="bg-[#11131a] p-4 border-t border-white/5 font-mono text-xs h-32 overflow-y-auto custom-scrollbar">
+                            <div class="mb-2 text-gray-500">> Initializing session context...</div>
+                            <div class="mb-2">
+                                <span class="text-rose-500">Sarah_C:</span> <span class="text-gray-300">I reviewed your
+                                    System Design for the URL Shortener.</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="text-rose-500">Sarah_C:</span> <span class="text-gray-300">The sharding key
+                                    choice looks risky for high write throughput. Have you considered...</span>
+                            </div>
+                            <div class="typing-indicator flex gap-1 mt-2">
+                                <span class="w-1 h-1 bg-rose-500 rounded-full animate-bounce"></span>
+                                <span class="w-1 h-1 bg-rose-500 rounded-full animate-bounce delay-100"></span>
+                                <span class="w-1 h-1 bg-rose-500 rounded-full animate-bounce delay-200"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="career" class="py-24 bg-[#050505] border-b border-white/5">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded bg-green-500/10 border border-green-500/20 text-green-500 text-xs font-mono font-bold tracking-wider mb-4">
+                    <i class="fa-solid fa-rocket"></i> FINAL MODULE
+                </div>
+                <h2 class="text-4xl font-bold font-mono mb-6 text-white">Career <span
+                        class="text-green-500">Compiler</span>
+                </h2>
+                <p class="text-brand-muted max-w-2xl mx-auto mb-16 font-mono text-sm text-gray-400">
+                    > System unlocked.<br>
+                    > Compiling your profile for top recruiters.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="group bg-[#0F1218] p-8 rounded-xl text-left border border-white/5 hover:border-green-500/30 transition duration-300 relative overflow-hidden">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-green-500/5 rounded-full blur-3xl"></div>
+                        <div
+                            class="w-12 h-12 bg-green-500/10 rounded border border-green-500/20 flex items-center justify-center mb-6 text-green-500 group-hover:bg-green-500 group-hover:text-black transition">
+                            <i class="fa-solid fa-id-badge text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white font-mono">Dynamic Resume Generator</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                            Forget Word templates. We generate live, web-based portfolios linked to your Git commits,
+                            project demos, and verified skill badges.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-green-500 text-xs font-bold hover:gap-3 transition-all font-mono">
+                            > PREVIEW_TEMPLATE <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="group bg-[#0F1218] p-8 rounded-xl text-left border border-white/5 hover:border-blue-500/30 transition duration-300 relative overflow-hidden">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500/5 rounded-full blur-3xl"></div>
+                        <div
+                            class="w-12 h-12 bg-blue-500/10 rounded border border-blue-500/20 flex items-center justify-center mb-6 text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-crosshairs text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white font-mono">Precision Targeting</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                            Data-driven roadmap to your dream package. "Solve 45 more Hard Graph Problems to unlock
+                            Amazon
+                            eligibility."
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-blue-500 text-xs font-bold hover:gap-3 transition-all font-mono">
+                            > VIEW_TARGETS <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-[#0A0A0A] border-b border-white/5">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-xs font-bold text-gray-500 uppercase tracking-[0.2em] mb-8 font-mono">>>
+                    SYSTEM_SCALING_TO
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span
+                        class="px-4 py-2 bg-white/5 border border-white/5 rounded text-sm font-mono text-gray-400 hover:text-white hover:border-white/20 transition cursor-default">Mechanical.eng</span>
+                    <span
+                        class="px-4 py-2 bg-white/5 border border-white/5 rounded text-sm font-mono text-gray-400 hover:text-white hover:border-white/20 transition cursor-default">Electrical.eng</span>
+                    <span
+                        class="px-4 py-2 bg-white/5 border border-white/5 rounded text-sm font-mono text-gray-400 hover:text-white hover:border-white/20 transition cursor-default">Civil.eng</span>
+                    <span
+                        class="px-4 py-2 bg-white/5 border border-white/5 rounded text-sm font-mono text-gray-400 hover:text-white hover:border-white/20 transition cursor-default">ECE_VLSI.eng</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-[#050505] border-b border-white/5">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-2xl font-bold font-mono text-center mb-12 text-white"><span
+                        class="text-brand-accent">/</span> FAQ</h2>
+                <div class="space-y-4">
+                    <div class="border border-white/5 rounded p-5 bg-[#0A0A0A] hover:border-white/10 transition">
+                        <h4 class="font-bold text-white mb-2 font-mono text-sm">[?] Is it really free?</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed font-mono">
+                            > Yes. 100% free for 1st Year. Startups pay us to find talent, so we don't have to charge
+                            you
+                            for learning.
+                        </p>
+                    </div>
+                    <div class="border border-white/5 rounded p-5 bg-[#0A0A0A] hover:border-white/10 transition">
+                        <h4 class="font-bold text-white mb-2 font-mono text-sm">[?] My college isn't listed?</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed font-mono">
+                            > Use the 'Crowdsource Protocol'. Upload your syllabus PDF, and our AI will generate a
+                            roadmap
+                            and sync it within 24 hours.
+                        </p>
+                    </div>
+                    <div class="border border-white/5 rounded p-5 bg-[#0A0A0A] hover:border-white/10 transition">
+                        <h4 class="font-bold text-white mb-2 font-mono text-sm">[?] Are Micro-Internships real?</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed font-mono">
+                            > They are simulations based on real datasets. While unpaid, they provide "Proof of Work"
+                            (Github commits) that recruiters verify.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ready to Upgrade Section -->
+        <section class="py-32 relative overflow-hidden bg-[#050505]">
+            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-accent/5 rounded-full blur-[120px] pointer-events-none">
+            </div>
+
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+                <h2 class="text-4xl md:text-7xl font-bold font-mono mb-8 text-white tracking-tight">
+                    Initialize Your <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Career</span>
+                </h2>
+                <p class="text-lg text-gray-500 mb-12 max-w-xl mx-auto font-mono">
+                    > Stop consuming random content.<br>
+                    > Start building your engineering OS.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <button
+                        class="group relative px-8 py-4 bg-white text-black font-bold text-lg rounded hover:bg-gray-200 transition font-mono tracking-wide">
+                        <span
+                            class="absolute inset-0 w-full h-full bg-blue-500 blur-lg opacity-20 group-hover:opacity-40 transition"></span>
+                        <span class="relative flex items-center gap-2">
+                            <i class="fa-solid fa-terminal text-sm"></i> LAUNCH_APP
+                        </span>
+                    </button>
+                </div>
+                <p class="mt-8 text-xs text-gray-600 font-mono">v1.0.4 Staging • No Credit Card Required</p>
+            </div>
+        </section>
+
+        <footer class="bg-[#020202] border-t border-white/5 py-12 font-mono">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid md:grid-cols-4 gap-8 mb-12">
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center gap-2 mb-4">
+                            <div
+                                class="w-5 h-5 bg-brand-accent rounded flex items-center justify-center text-white text-[10px] font-bold">
+                                FE</div>
+                            <span class="text-lg font-bold text-white tracking-tighter">Fix-D-Gap</span>
+                        </div>
+                        <p class="text-gray-600 text-xs max-w-xs leading-relaxed">
+                            // The Operating System for Engineers.<br>
+                            // Optimizing the path from Freshman to Full-Stack.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Modules</h4>
+                        <ul class="space-y-2 text-xs text-gray-600">
+                            <li><a href="#" class="hover:text-brand-accent transition">> Skill_Verse</a></li>
+                            <li><a href="#" class="hover:text-brand-accent transition">> Project_Forge</a></li>
+                            <li><a href="#" class="hover:text-brand-accent transition">> Uni_Sync</a></li>
+                            <li><a href="#" class="hover:text-brand-accent transition">> Comp_Arena</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Protocol</h4>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-gray-600 hover:text-white transition"><i
+                                    class="fa-brands fa-github text-xl"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-blue-400 transition"><i
+                                    class="fa-brands fa-twitter text-xl"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-indigo-400 transition"><i
+                                    class="fa-brands fa-discord text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-white/5 pt-8 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="text-[10px] text-gray-700">
+                        &copy; 2024 Fix-D-Gap Inc. All systems nominal.
+                    </div>
+                    <div
+                        class="flex items-center gap-2 text-[10px] text-green-500 bg-green-900/10 px-2 py-1 rounded border border-green-900/20">
+                        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                        SERVER_STATUS: ONLINE
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+
+            // Navbar blur effect on scroll
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('navbar');
+                if (window.scrollY > 50) {
+                    nav.classList.add('shadow-lg');
+                    nav.classList.add('bg-brand-dark/90');
+                } else {
+                    nav.classList.remove('shadow-lg');
+                    nav.classList.remove('bg-brand-dark/90');
+                }
+            });
+        </script>
+</body>
+
+</html>
